@@ -24,13 +24,6 @@
   border: 3px none #ffffff;
 }
 
-li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 12px;
-}
-
 .contDetails{
   margin-top: 100px;
 }
@@ -49,4 +42,45 @@ li {
 .cardImgPlanet {
   height: 300px;
   width: 300px;
+}
+
+.footer {
+  color: white;
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, .7);
+  padding: 8px 24px;
+  border-radius: 32px;
+  opacity: .95;
+  backdrop-filter: blur(8px);
+}
+
+.footer span {
+  font-size: 14px;
+  color: #09f;
+  opacity: .8;
+}
+
+.footer h4, .footer h5 {
+  margin: 0;
+  display: flex;
+}
+
+.liContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.lm {
+  color: white;
+  height: 100%;
+}
+
+.subTit {
+  color: white;
 }

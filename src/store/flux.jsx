@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -14,9 +16,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			getPeopleData: async () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
 				try {
 					const response = await fetch("https://swapi.dev/api/people/");
 					if (!response.ok) {
@@ -60,6 +59,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  } catch (error) {
 					console.error("There was a problem fetching the data:", error);
 				  }
+			},
+			addToFav: ()=> {
+				
 			}
 
 			// changeColor: (index, color) => {

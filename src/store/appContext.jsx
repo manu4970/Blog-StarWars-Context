@@ -21,6 +21,10 @@ const injectContext = (PassedComponent) => {
       })
     );
 
+    const [fav,setFav] = useState([])
+
+
+
     useEffect(() => {
       state.actions.getPeopleData();
       state.actions.getFilmsData();
@@ -38,50 +42,3 @@ const injectContext = (PassedComponent) => {
 };
 
 export default injectContext;
-
-
-// export function DataProvider ( {children} ) {
-
-//   const [people,setPeople] = useState([])
-//   const [films, setFilms] = useState([])
-// 	const [planets, setPlanets] = useState([])
-
-//   const peopleUrl = 'https://swapi.dev/api/people/'
-// 	const filmsUrl = 'https://swapi.dev/api/films/'
-// 	const planetsUrl = 'https://swapi.dev/api/planets/'
-
-// 	async function getPeopleData() {
-// 		const response = await fetch(peopleUrl)
-// 		if (response.ok) {
-// 			const data = await response.json()
-// 			setPeople(data.results)
-// 		} else {
-// 			console.log('Error al obtener people data')
-// 		}
-// 	}
-
-//   async function getFilmsData() {
-// 		const response = await fetch(filmsUrl)
-// 		if (response.ok) {
-// 			const data = await response.json()
-// 			setFilms(data.results)
-// 		} else {
-// 			console.log('Error al obtener films data')
-// 		}
-// 	}
-
-// 	async function getPlanetsData() {
-// 		const response = await fetch(planetsUrl)
-// 		if (response.ok) {
-// 			const data = await response.json()
-// 			setPlanets(data.results)
-// 		} else {
-// 			console.log('Error al obtener planets data')
-// 		}
-// 	}
-
-//   useEffect(()=>{
-//     getPeopleData()
-//     getFilmsData()
-//     getPlanetsData()
-//   },[])
